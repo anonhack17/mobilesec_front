@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const Remove = (props) => {
     const [loading, setLoading] = useState(false);
@@ -7,9 +7,13 @@ const Remove = (props) => {
 
     const handleRemoveExploits = () => {
         setLoading(true);
-        fetch('http://127.0.0.1:8000/remove_exploits/', {
-            method: 'POST',
-            body: JSON.stringify({ exploits: props.scanResult })
+
+        const params = new URLSearchParams({
+            exploits: JSON.stringify(props.scanResult)
+        });
+
+        fetch(`http://127.0.0.1:8000/remove_exploits/?${params.toString()}`, {
+            method: 'GET',
         })
             .then(response => {
                 if (!response.ok) {
@@ -31,7 +35,6 @@ const Remove = (props) => {
                 setLoading(false);
             });
     };
-
     return (
         <div>
             <button
@@ -48,6 +51,8 @@ const Remove = (props) => {
 };
 
 const buttonStyle = {
+    width: '100%',
+    margin: '10px 0',
     padding: '10px 20px',
     fontSize: '16px',
     backgroundColor: '#dc3545',
