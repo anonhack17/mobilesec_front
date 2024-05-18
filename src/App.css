@@ -1,0 +1,197 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.threats-guide-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.threats-guide-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.threat-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.threat-card h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.threat-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.threat-card p strong {
+  color: #333;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #4f6d7a, #c0d6df);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-header h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.home-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-section h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.threat, .news-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.threat:hover, .news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.threat-icon, .news-icon {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-right: 20px;
+}
+
+.threat h3, .news-item h3 {
+  font-size: 1.2em;
+  padding: 0 10px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.threat p, .news-item p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tips-section ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.tips-section ul li {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2em;
+  }
+
+  .home-header p {
+    font-size: 1em;
+  }
+
+  .home-section h2 {
+    font-size: 1.5em;
+  }
+
+  .threat-icon, .news-icon {
+    font-size: 2em;
+    margin-right: 15px;
+  }
+
+  .threat h3, .news-item h3 {
+    font-size: 1em;
+  }
+
+  .threat p, .news-item p {
+    font-size: 1em;
+  }
+}
+
+.icon-header{
+  color: #4f6d7a;
+  top: 2px;
+  position: relative;
+}
